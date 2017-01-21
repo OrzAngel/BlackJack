@@ -1,0 +1,14 @@
+ExtraCredit.txt
+
+
+For the Ec, I design two AI players
+
+One is called AIPlayerBasic, sticking to the basic strategy from the wikipedia.
+The other is called AIPlayer, counting every single card in the game. It will take a look at all the future possiblities based on the deck remaining, cards in hand and dealer's face up card. It will calculate the probability of winning when choose to hit and the probability of wining when choose to stand, then follow the one with the greater probablity. I think this is a stragety that a human being could never achieve.
+
+Well, either one could not guarentee more winning than losing. But when considering bet, split and double down, it may be possible that one can make money by playing BlackJack.
+
+
+The BlackJackTester_ExtraCredit.java will simluate 9 AI players against the dealer for 100 times. The first 8 are AIPlayBasic, the last one is an AIPlayer which I believe will have more advantage.
+
+
