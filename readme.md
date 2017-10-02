@@ -1,9 +1,6 @@
-readme.txt
+# BlackJack
 
-==========================================================================
-BlackJack
-
-Most of detailed info is in the code comment.
+Winner winner chicken dinner!
 ________
 Synopsis
 
@@ -62,15 +59,3 @@ I managed to implement a BlackJack game with multiple players. And I want to ach
 
 4) At first I want to design two seperate classes to achieve the blackJack. one called BlackJackCode, which has no instance variables and knows all the rules about BlackJack. The other one called Casino, holding all the Deck, Hands and Players as instance varibles. I want to make the BlackJackCode sth like the Math class, creating no object of its own but having the method taking the objects in the Casino class as arguments. And the Casino class is able to run the game among its Players with its Deck under the guildline of the BlackJackCode. But I failed to make it. I ended up with a BlackJackScore class responsible for calculating the score of a hand of cards only. And a BlackJack class do all the rest. 
 
-___________
-Known flaws
-
-1) Now the BlackJack class is only capable for one single game, the oneGame() method. The main method of BlackJackTester is now resiponsible for running the game multiple times in a row, which I dont think is a good way of abstraction. And the oneGame() method now returns an ArrayList indicating each Player's win or lose, which is far from good design. Since I want make "score" not an instance variable of Player and BlackJack(because now the BlackJack is only aware of oneGame) but of BlackJackTester(which as I suggested is now responsible for multiple games), I still try to find out an elegant way to handle the results of one game when there are multiple players. It could be achieved by a String or some other class of my own design.
-
-2) Now the BlackJack class has two ArrayList of the same size, one for Hands, the other for the score of the Hand with the same index. It annoys me all the time. I could make the score an instance variable of Hand, just like the Player. Or I could design a private wrapper class inside the BlackJack combining the Hand, its holder and its score together.
-
-private class Wrapper {
-	Hand hand; (where Player is no longer an instance)
-	Player player;
-	int score;
-}  
